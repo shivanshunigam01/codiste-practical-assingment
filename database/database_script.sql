@@ -33,7 +33,7 @@ CREATE TABLE `post_likes` (
   KEY `user_id` (`user_id`),
   CONSTRAINT `post_likes_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`),
   CONSTRAINT `post_likes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `post_likes` (
 
 LOCK TABLES `post_likes` WRITE;
 /*!40000 ALTER TABLE `post_likes` DISABLE KEYS */;
-INSERT INTO `post_likes` VALUES (44,3,1,12,'2025-03-29 22:06:48'),(45,3,1,13,'2025-03-29 22:07:37'),(48,4,1,10,'2025-03-29 22:13:09'),(49,1,1,14,'2025-03-29 22:13:15'),(50,1,1,10,'2025-03-29 22:13:17'),(51,2,1,5,'2025-03-29 22:51:43'),(56,2,1,15,'2025-03-29 23:20:38');
+INSERT INTO `post_likes` VALUES (1,6,1,15,'2025-03-31 13:45:01'),(2,6,1,17,'2025-03-31 13:45:44');
 /*!40000 ALTER TABLE `post_likes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -64,7 +64,7 @@ CREATE TABLE `posts` (
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `posts` (
 
 LOCK TABLES `posts` WRITE;
 /*!40000 ALTER TABLE `posts` DISABLE KEYS */;
-INSERT INTO `posts` VALUES (1,1,'aefaef','QEftqewtqef','https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*','2025-03-29 20:04:55',NULL),(2,1,'aefaef','QEftqewtqef','https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*','2025-03-29 20:07:41',NULL),(3,1,'asdasdasds','asdasdasdasd','https://media.licdn.com/dms/image/v2/D4D0BAQHxHght_dSoEw/company-logo_200_200/company-logo_200_200/0/1704104942179/codiste_pvt_ltd_logo?e=2147483647&v=beta&t=XBfplxbDS0CJ54uesz3qB_TJz7-_QG9a5V6C82SUlmc','2025-03-29 21:57:00',NULL),(4,14,'nothing ','asdasdasdasdads','https://media.istockphoto.com/id/1172643701/photo/oops-little-girl-laughing.jpg?s=612x612&w=0&k=20&c=HeDjvrH-rbJOMGuJW20QixtmGe9xZc4nTf-V411WjBo=','2025-03-29 22:12:32',NULL);
+INSERT INTO `posts` VALUES (6,15,'This is the First Post','Codiste pratical assingment','https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=0.752xw:1.00xh;0.175xw,0&resize=1200:*','2025-03-31 13:45:00',NULL);
 /*!40000 ALTER TABLE `posts` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -93,7 +93,7 @@ CREATE TABLE `users` (
   `modified_at` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Jai','Jai@example.com','securepassword','2025-03-29 17:03:49','2025-03-31 13:14:08'),(2,'shiva','shiva@gmail.com','securepassword','2025-03-29 17:37:10',NULL),(3,'SHIVANSHU NIGAM','tanmay.shah@ahasolar.in','Password1','2025-03-29 17:39:21',NULL),(4,'Shivanshu','shivanshunigam8@gmail.com','shiva123','2025-03-29 17:40:03',NULL),(5,'ajay kumar prajapati','ajay980p@gmail.com','ajay980p@gmail.com','2025-03-29 17:44:00',NULL),(7,'shiva','shiva@gmai1l.com','securepassword','2025-03-29 19:48:26',NULL),(9,'shiva','shiva@gmai1lerr.com','securepassword','2025-03-29 19:57:32',NULL),(10,'SHIVANSHU NIGAM','ajay980p1@gmail.com','ajay980p1@gmail.com','2025-03-29 21:27:35',NULL),(12,'Deva','tanmay.shaasddsh@ahasolar.in','tanmay.shah@ahasolar.in','2025-03-29 21:58:01',NULL),(13,'raju@gmail.com','raju@gmail.com','raju@gmail.com','2025-03-29 22:07:16',NULL),(14,'priya','priya@gmail.com','priya@gmail.com','2025-03-29 22:11:32',NULL),(15,'shivanshu nigam','shivanshu.codiste@gmail.com','shivanshu.codiste@gmail.com','2025-03-29 23:12:44',NULL);
+INSERT INTO `users` VALUES (1,'Jai','Jai@example.com','securepassword','2025-03-29 17:03:49','2025-03-31 13:14:08'),(2,'shiva','shiva@gmail.com','securepassword','2025-03-29 17:37:10',NULL),(3,'SHIVANSHU NIGAM','tanmay.shah@ahasolar.in','Password1','2025-03-29 17:39:21',NULL),(4,'Shivanshu','shivanshunigam8@gmail.com','shiva123','2025-03-29 17:40:03',NULL),(5,'ajay kumar prajapati','ajay980p@gmail.com','ajay980p@gmail.com','2025-03-29 17:44:00',NULL),(7,'shiva','shiva@gmai1l.com','securepassword','2025-03-29 19:48:26',NULL),(9,'shiva','shiva@gmai1lerr.com','securepassword','2025-03-29 19:57:32',NULL),(10,'SHIVANSHU NIGAM','ajay980p1@gmail.com','ajay980p1@gmail.com','2025-03-29 21:27:35',NULL),(12,'Deva','tanmay.shaasddsh@ahasolar.in','tanmay.shah@ahasolar.in','2025-03-29 21:58:01',NULL),(13,'raju@gmail.com','raju@gmail.com','raju@gmail.com','2025-03-29 22:07:16',NULL),(14,'priya','priya@gmail.com','priya@gmail.com','2025-03-29 22:11:32',NULL),(15,'shivanshu nigam','shivanshu.codiste@gmail.com','shivanshu.codiste@gmail.com','2025-03-29 23:12:44',NULL),(17,'Deva','nigamdeva45@gmail.com','nigamdeva45@gmail.com','2025-03-31 13:45:34',NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -321,4 +321,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-03-31 13:14:50
+-- Dump completed on 2025-03-31 13:47:15
