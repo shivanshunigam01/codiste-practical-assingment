@@ -1,0 +1,104 @@
+/* Post Card Styles */
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .post-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .post-card:hover .post-image img {
+    transform: scale(1.05);
+  }
+  
+  .post-content {
+    padding: 16px;
+  }
+  
+  .post-title {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+  }
+  
+  .post-description {
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    /* Limit to 3 lines with ellipsis */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .post-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .like-button {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+  }
+  
+  .like-button:hover {
+    background-color: rgba(74, 118, 168, 0.1);
+  }
+  
+  .heart-icon {
+    margin-right: 6px;
+    font-size: 1.1rem;
+  }
+  
+  .like-count {
+    font-weight: 500;
+  }
+  
+  .post-likes {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    padding-top: 8px;
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .liked-by-text {
+    font-weight: 500;
+  }
+  
+  .liked-by-names {
+    color: var(--primary-color);
+  }
+  
+  .no-likes {
+    font-style: italic;
+  }
+  
+  

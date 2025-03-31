@@ -1,0 +1,91 @@
+/* Main App Styles */
+:root {
+    --primary-color: #4a76a8;
+    --primary-hover: #3a5b80;
+    --secondary-color: #f0f2f5;
+    --text-color: #1c1e21;
+    --text-secondary: #65676b;
+    --border-color: #dddfe2;
+    --error-color: #e41e3f;
+    --success-color: #42b72a;
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --transition-speed: 0.2s;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+  }
+  
+  .post-app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .app-header h1 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+  }
+  
+  .app-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .form-section,
+  .posts-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+  }
+  
+  .form-section h2,
+  .posts-section h2 {
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+  }
+  
+  .empty-state {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-secondary);
+  }
+  
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .post-app {
+      padding: 10px;
+    }
+  
+    .posts-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  
